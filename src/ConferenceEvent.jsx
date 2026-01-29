@@ -72,23 +72,23 @@ const ConferenceEvent = () => {
       <navbar className="navbar_event_conference">
         <div className="company_logo">Conference Expense Planner</div>
         <div className="left_navbar">
-          <div className="nav_links">
-            <a href="#venue" onClick={() => navigateToProducts("#venue")}>
-              Venue
-            </a>
-            <a href="#addons" onClick={() => navigateToProducts("#addons")}>
-              Add-ons
-            </a>
-            <a href="#meals" onClick={() => navigateToProducts("#meals")}>
-              Meals
-            </a>
-          </div>
-          <button
-            className="details_button"
-            onClick={() => setShowItems(!showItems)}
-          >
-            Show Details
-          </button>
+               <div className="nav_links">
+                 <a href="#venue" onClick={() => navigateToProducts("#venue")}>
+                   Venue
+                 </a>
+                 <a href="#addons" onClick={() => navigateToProducts("#addons")}>
+                   Add-ons
+                 </a>
+                 <a href="#meals" onClick={() => navigateToProducts("#meals")}>
+                   Meals
+                 </a>
+               </div>
+               <button
+                 className="details_button"
+                 onClick={() => setShowItems(!showItems)}
+               >
+                 Show Details
+               </button>
         </div>
       </navbar>
 
@@ -99,6 +99,9 @@ const ConferenceEvent = () => {
               <div className="text">
                 <h1>Venue Room Selection</h1>
               </div>
+
+              
+
               <div className="venue_selection">
                 {venueItems.map((item, index) => (
                   <div className="venue_main" key={index}>
@@ -117,6 +120,7 @@ const ConferenceEvent = () => {
                                 ? "btn-warning btn-disabled"
                                 : "btn-minus                     btn-warning"
                             }
+
                             onClick={() => handleRemoveFromCart(index)}
                           >
                             &#8211;
@@ -196,18 +200,9 @@ const ConferenceEvent = () => {
               <div className="total_cost">Total Cost: </div>
             </div>
           </div>
-        ) : (
-          <div className="total_amount_detail">
-            <TotalCost
-              totalCosts={totalCosts}
-              handleClick={handleToggleItems}
-              ItemsDisplay={() => <ItemsDisplay items={items} />}
-            />
-          </div>
-        )}
-      </div>
-    </>
-  );
-};
+        ) : 
+        
+        (
+
 
 export default ConferenceEvent;
