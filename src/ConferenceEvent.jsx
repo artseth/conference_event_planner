@@ -203,6 +203,17 @@ const ConferenceEvent = () => {
         ) : 
         
         (
-
+          <div className="total_amount_detail">
+            <TotalCost
+              totalCosts={totalCosts}
+              handleClick={handleToggleItems}
+              ItemsDisplay={() => <ItemsDisplay items={items} />}
+            />
+          </div>
+        )}
+      </div>
+    </>
+  );
+};
 
 export default ConferenceEvent;
