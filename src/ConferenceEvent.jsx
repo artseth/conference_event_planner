@@ -261,7 +261,7 @@ const ConferenceEvent = () => {
                                 <label htmlFor={`meal_${index}`}> {item.name} </label>
                             </div>
                             <div className="meal_cost">${item.cost}</div>
-                            <div className="total_cost">Total Cost: {mealsTotalCost}</div>
+                            
                         </div>
 
                         
@@ -271,7 +271,7 @@ const ConferenceEvent = () => {
                 </div>
 
               </div>
-              <div className="total_cost">Total Cost: </div>
+              <div className="total_cost">Total Cost:{mealsTotalCost} </div>
             </div>
           </div>
         ) : 
